@@ -1,8 +1,42 @@
 var Counter = React.createClass({
+	getDefaultProps: function() {
+		console.log('getDefaultProps');
+	},
+
 	getInitialState: function() {
+		console.log('getInitialState');
 		return {
 			counter: 0
 		};
+	},
+
+	componentWillMount: function() {
+		console.log('componentWillMount');
+	},
+
+	componentDidMount: function() {
+		console.log('componentDidMount');
+	},
+
+	componentWillReceiveProps: function(nextProps) {
+		console.log('componentWillReceiveProps');
+	},
+
+	shouldComponentUpdate: function(nextProps, nextState) {
+		console.log('shouldComponentUpdate');
+		return true;
+	},
+
+	componentWillUpdate: function(nextProps, nextState) {
+		console.log('componentWillUpdate');
+	},
+
+	componentDidUpdate: function(nextProps, nextState) {
+		console.log('componentDidUpdate');
+	},
+
+	componentWillUnmount: function() {
+		console.log('componentWillUnmount');
 	},
 
 	increment: function() {
@@ -18,7 +52,10 @@ var Counter = React.createClass({
 		});
 	},
 
+
+
 	render: function() {
+		console.log('render');
 		return React.createElement('div', {},
 					React.createElement('button', {onClick: this.increment}, '+'),
 					React.createElement('button', {onClick: this.decrement}, '-'),
