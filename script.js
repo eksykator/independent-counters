@@ -32,7 +32,7 @@ var Counter = React.createClass({
 		console.log('componentWillUpdate - przeznaczenie jest analogiczne to componentWillMount jednak w procesie aktualizacji');
 	},
 
-	componentDidUpdate: function(nextProps, nextState) {
+	componentDidUpdate: function(prevProps, prevState) {
 		console.log('componentDidUpdate - odpowiednik componentDidMount jednak w procesie aktualizacji');
 	},
 
